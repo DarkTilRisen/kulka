@@ -1,7 +1,7 @@
 import struct
 
 
-class Request(object):
+class Request:
 
     DID = None
     CID = None
@@ -19,7 +19,7 @@ class Request(object):
         self._data = args
 
     @classmethod
-    def async(cls, *args):
+    def custom_async(cls, *args):
         obj = cls(*args)
         obj.answer = False
         return obj
